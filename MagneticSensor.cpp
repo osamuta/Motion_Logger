@@ -38,7 +38,6 @@ Error MagneticSensor::initialize(I2C *i2c,
   {
     return Error(FATAL_ERROR, F("FATAL_ERROR : QMC58837's register is not available!\n "));
   }
-  _i2c->write1Byte(QMC5883_ADDRESS, REG_SETRESET, 1);
   
   // configure sensor
   configure(rate, sample, range);
@@ -50,6 +49,7 @@ void MagneticSensor::configure(MagneticSensorDataRate rate,
                     MagneticSensorSample sample,
                     MagneticSensorRange range)
 {
+  _i2c->write1Byte(QMC5883_ADDRESS, REG_SETRESET, 1);
   _i2c->write1Byte(QMC5883_ADDRESS, REG_CONFIG_1, sample << 6 | range << 4 | rate << 2 | 0b01);
   if (range == RANGE_2GA)
     _sensitivity = SENSITIVITY_2G_LSB_PER_GAUSE;
