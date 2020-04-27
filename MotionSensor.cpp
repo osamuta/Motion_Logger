@@ -20,7 +20,7 @@ Error MotionSensor::initialize(I2C *i2c, GyroFullScaleRange gyroFullScaleRange, 
   { 
     return Error(FATAL_ERROR, F("FATAL_ERROR : I2C pointer is NULL!\n"));
   }
-  if (!i2c->isInitialized())
+  if (!_i2c->isInitialized())
   {
     return Error(FATAL_ERROR, F("FATAL_ERROR : I2C was not initialized!\n"));
   }

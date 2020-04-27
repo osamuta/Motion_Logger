@@ -30,7 +30,7 @@ Error MagneticSensor::initialize(I2C *i2c,
   _i2c = i2c;
   
   // begin wiring to magnetic sensor
-  if (!i2c->isSlaveConnected(QMC5883_ADDRESS))
+  if (!_i2c->isSlaveConnected(QMC5883_ADDRESS))
   {
     return Error(FATAL_ERROR, F("FATAL_ERROR : QMC5883 is not available!\n"));;
   }
