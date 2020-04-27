@@ -51,17 +51,17 @@ class MotionSensor
     static const uint8_t REG_PWR_MGMT_1                   = 0x6B;
     static const uint8_t REG_WHO_AM_I                     = 0x75;
     
-    static constexpr float GYRO_SENSITIVITY_250_DEGEREE_PER_SEC = 131;
-    static constexpr float GYRO_SENSITIVITY_500_DEGEREE_PER_SEC = 65.5;
-    static constexpr float GYRO_SENSITIVITY_1000_DEGEREE_PER_SEC = 32.8;
-    static constexpr float GYRO_SENSITIVITY_2000_DEGEREE_PER_SEC = 16.4;
+    static const float GYRO_SENSITIVITY_250_DEGEREE_PER_SEC = 131;
+    static const float GYRO_SENSITIVITY_500_DEGEREE_PER_SEC = 65.5;
+    static const float GYRO_SENSITIVITY_1000_DEGEREE_PER_SEC = 32.8;
+    static const float GYRO_SENSITIVITY_2000_DEGEREE_PER_SEC = 16.4;
 
-    static constexpr float ACCEL_SENSITIVITY_2G = 16384;
-    static constexpr float ACCEL_SENSITIVITY_4G = 8192;
-    static constexpr float ACCEL_SENSITIVITY_8G = 4096;
-    static constexpr float ACCEL_SENSITIVITY_16G = 2048;
+    static const float ACCEL_SENSITIVITY_2G = 16384;
+    static const float ACCEL_SENSITIVITY_4G = 8192;
+    static const float ACCEL_SENSITIVITY_8G = 4096;
+    static const float ACCEL_SENSITIVITY_16G = 2048;
 
-    static constexpr float GRAVITATIONAL_ACCELERATION = 9.80665;
+    static const float GRAVITATIONAL_ACCELERATION = 9.80665;
     
     I2C *_i2c;
     float _gyroSensitivity;
