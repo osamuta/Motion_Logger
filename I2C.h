@@ -35,6 +35,11 @@ class I2C
 
     uint32_t getClockHz() { return _clock; }
     boolean isInitialized() { return _initialized; }
+    boolean isSlaveConnected(uint8_t slaveAdress)
+    {
+      Wire.beginTransmission(slaveAdress);
+      return !Wire.endTransmission();
+    }
 
     //
     // writer

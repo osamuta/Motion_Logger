@@ -27,8 +27,7 @@ Error MotionSensor::initialize(I2C *i2c, GyroFullScaleRange gyroFullScaleRange, 
   _i2c = i2c;
 
   // begin wiring to sensor
-  Wire.beginTransmission(MPU6050_ADRESS);
-  if (Wire.endTransmission() != 0)
+  if (!_i2c->isSlaveConnected(MPU6050_ADRESS))
   {
     return Error(FATAL_ERROR, F("FATAL_ERROR : MPU6050 is not available!\n"));;
   }
