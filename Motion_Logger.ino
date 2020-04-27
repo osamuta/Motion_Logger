@@ -19,6 +19,7 @@
 #include "MagneticSensor.h"
 #include "MotionSensor.h"
 
+#define LICENSE F(" DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE \n                     Version 2, December 2004 \n Copyright (C) 2020 Kawakami Shuta <rivertop.osamuta@gmail.com> \n Everyone is permitted to copy and distribute verbatim or modified \n copies of this license document, and changing it is allowed as long \n as the name is changed. \n            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE \n TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION \n 0. You just DO WHAT THE FUCK YOU WANT TO.\n\n")
 #define DATA_FORMAT F("Time[milliSec],Temperature sensored by magnetic sensor[C],True azimuth XY[°],True azimuth XZ[°],True azimuth YZ[°],Temperature sensored by motion sensor[C],Gyro sensor X[°],Gyro sensor Y[°],Gyro sensor Z[°],Acceleration X[Meter Per Second Sqaure],Acceleration Y[Meter Per Second Sqaure],Acceleration Z[Meter Per Second Sqaure],\n")
 
 
@@ -163,6 +164,7 @@ void setup()
 {
 #ifdef DEBUG
   Serial.begin(9600);
+  Serial.print(LICENSE);
 #endif
   interface.initialize();
   if (!canSat.initialize().isSucceeded())
