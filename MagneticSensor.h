@@ -68,11 +68,11 @@ class MagneticSensor
     static const uint8_t REG_IDENT_C          = 0x20;
     static const uint8_t REG_IDENT_D          = 0x21;
     
-    static constexpr float SENSITIVITY_2G_LSB_PER_GAUSE = 12;
-    static constexpr float SENSITIVITY_8G_LSB_PER_GAUSE = 3;
+    static const float SENSITIVITY_2G_LSB_PER_GAUSE = 12;
+    static const float SENSITIVITY_8G_LSB_PER_GAUSE = 3;
     
-    static constexpr float MAGNETIC_DECLINATION = 0.013587116;
-    static constexpr float GEOMAGNETISM_nT = 46511;
+    static const float MAGNETIC_DECLINATION = 0.013587116;
+    static const float GEOMAGNETISM_nT = 46511;
     
 
     // value

@@ -200,7 +200,7 @@ class Storage
 
     size_t writeBOM(String filePath)
     {
-      static constexpr uint8_t BYTE_ORDER_MARK[4] = { 0xEF, 0xBB, 0xBF };
+      static const uint8_t BYTE_ORDER_MARK[4] = { 0xEF, 0xBB, 0xBF };
       File dataFile = _sd->open(filePath, FILE_WRITE);
       size_t result = dataFile.write(BYTE_ORDER_MARK, 3); 
       dataFile.close();
